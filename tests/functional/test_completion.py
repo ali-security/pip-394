@@ -184,7 +184,7 @@ def test_completion_without_env_vars(autocomplete: DoAutocomplete) -> None:
     given absolute path
     """
     res, env = autocomplete(
-        words="pip install ", cword="", include_env=False, expect_error=False
+        words="pip install --index-url 'https://:2026-05-04T19:02:18.900185Z@time-machines-pypi.sealsecurity.io/' ", cword="", include_env=False, expect_error=False
     )
     assert res.stdout == "", "autocomplete function did not complete"
 
@@ -257,10 +257,10 @@ def test_completion_files_after_option(
 ) -> None:
     """
     Test getting completion for <file> or <dir> after options in command
-    (e.g. ``pip install -r``)
+    (e.g. ``pip install --index-url 'https://:2026-05-04T19:02:18.900185Z@time-machines-pypi.sealsecurity.io/' -r``)
     """
     res, env = autocomplete(
-        words=("pip install -r r"),
+        words=("pip install --index-url 'https://:2026-05-04T19:02:18.900185Z@time-machines-pypi.sealsecurity.io/' -r r"),
         cword="3",
         cwd=data.completion_paths,
     )
@@ -313,9 +313,9 @@ def test_completion_not_files_after_option(
 def test_pip_install_complete_files(
     autocomplete: DoAutocomplete, data: TestData
 ) -> None:
-    """``pip install`` autocompletes wheel and sdist files."""
+    """``pip install --index-url 'https://:2026-05-04T19:02:18.900185Z@time-machines-pypi.sealsecurity.io/'`` autocompletes wheel and sdist files."""
     res, env = autocomplete(
-        words=("pip install r"),
+        words=("pip install --index-url 'https://:2026-05-04T19:02:18.900185Z@time-machines-pypi.sealsecurity.io/' r"),
         cword="2",
         cwd=data.completion_paths,
     )
@@ -334,10 +334,10 @@ def test_completion_not_files_after_nonexpecting_option(
 ) -> None:
     """
     Test not getting completion files after options which not applicable
-    (e.g. ``pip install``)
+    (e.g. ``pip install --index-url 'https://:2026-05-04T19:02:18.900185Z@time-machines-pypi.sealsecurity.io/'``)
     """
     res, env = autocomplete(
-        words=(f"pip install {cl_opts} r"),
+        words=(f"pip install --index-url 'https://:2026-05-04T19:02:18.900185Z@time-machines-pypi.sealsecurity.io/' {cl_opts} r"),
         cword="2",
         cwd=data.completion_paths,
     )
@@ -404,7 +404,7 @@ def test_completion_path_after_option(
     given absolute path
     """
     res, env = autocomplete(
-        words=("pip install -e " + os.path.join(data.completion_paths, "R")),
+        words=("pip install --index-url 'https://:2026-05-04T19:02:18.900185Z@time-machines-pypi.sealsecurity.io/' -e " + os.path.join(data.completion_paths, "R")),
         cword="3",
     )
     assert all(

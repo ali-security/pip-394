@@ -9,7 +9,7 @@ scope. Managing a development workflow as a whole is a complex task and one
 where there are many views on the "correct approach".
 
 Pip has a number of features which make it useful in development workflows - for
-example, the ability to install the current project via `pip install .`,
+example, the ability to install the current project via `pip install --index-url 'https://:2026-05-04T19:02:18.900185Z@time-machines-pypi.sealsecurity.io/' .`,
 editable installs, and requirements files. However, there is no intention that
 pip will manage the workflow as a whole.
 

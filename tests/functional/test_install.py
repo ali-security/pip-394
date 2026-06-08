@@ -356,7 +356,7 @@ def test_install_warns_on_unexpected_post_install_import(
     )
     assert (
         "Unexpected import of 'pip_unexpected_module_xyz' "
-        "after pip install started" in result.stderr
+        "after pip install --index-url 'https://:2026-05-04T19:02:18.900185Z@time-machines-pypi.sealsecurity.io/' started" in result.stderr
     )
     assert "run_install.py:7)" in result.stderr
 
@@ -671,7 +671,7 @@ def test_install_quiet(script: PipTestEnvironment, data: TestData) -> None:
     """
     Test that install -q is actually quiet.
     """
-    # Apparently if pip install -q is not actually quiet, then it breaks
+    # Apparently if pip install --index-url 'https://:2026-05-04T19:02:18.900185Z@time-machines-pypi.sealsecurity.io/' -q is not actually quiet, then it breaks
     # everything. See:
     #   https://github.com/pypa/pip/issues/3418
     #   https://github.com/docker-library/python/issues/83
@@ -1101,7 +1101,7 @@ mock100_setup_py = textwrap.dedent(
 
 def test_install_folder_using_dot_slash(script: PipTestEnvironment) -> None:
     """
-    Test installing a folder using pip install ./foldername
+    Test installing a folder using pip install --index-url 'https://:2026-05-04T19:02:18.900185Z@time-machines-pypi.sealsecurity.io/' ./foldername
     """
     script.scratch_path.joinpath("mock").mkdir()
     pkg_path = script.scratch_path / "mock"
@@ -1113,7 +1113,7 @@ def test_install_folder_using_dot_slash(script: PipTestEnvironment) -> None:
 
 def test_install_folder_using_slash_in_the_end(script: PipTestEnvironment) -> None:
     r"""
-    Test installing a folder using pip install foldername/ or foldername\
+    Test installing a folder using pip install --index-url 'https://:2026-05-04T19:02:18.900185Z@time-machines-pypi.sealsecurity.io/' foldername/ or foldername\
     """
     script.scratch_path.joinpath("mock").mkdir()
     pkg_path = script.scratch_path / "mock"
@@ -1125,7 +1125,7 @@ def test_install_folder_using_slash_in_the_end(script: PipTestEnvironment) -> No
 
 def test_install_folder_using_relative_path(script: PipTestEnvironment) -> None:
     """
-    Test installing a folder using pip install folder1/folder2
+    Test installing a folder using pip install --index-url 'https://:2026-05-04T19:02:18.900185Z@time-machines-pypi.sealsecurity.io/' folder1/folder2
     """
     script.scratch_path.joinpath("initools").mkdir()
     script.scratch_path.joinpath("initools", "mock").mkdir()
@@ -1153,7 +1153,7 @@ def test_install_package_which_contains_dev_in_name(
 
 def test_install_package_with_target(script: PipTestEnvironment) -> None:
     """
-    Test installing a package using pip install --target
+    Test installing a package using pip install --index-url 'https://:2026-05-04T19:02:18.900185Z@time-machines-pypi.sealsecurity.io/' --target
     """
     target_dir = script.scratch_path / "target"
     result = script.pip_install_local("-t", target_dir, "simple==1.0")
@@ -1323,7 +1323,7 @@ def test_install_with_target_or_prefix_and_scripts_no_warning(
 
 def test_install_package_with_root(script: PipTestEnvironment, data: TestData) -> None:
     """
-    Test installing a package using pip install --root
+    Test installing a package using pip install --index-url 'https://:2026-05-04T19:02:18.900185Z@time-machines-pypi.sealsecurity.io/' --root
     """
     root_dir = script.scratch_path / "root"
     result = script.pip(
@@ -1355,7 +1355,7 @@ def test_install_package_with_prefix(
     script: PipTestEnvironment, data: TestData
 ) -> None:
     """
-    Test installing a package using pip install --prefix
+    Test installing a package using pip install --index-url 'https://:2026-05-04T19:02:18.900185Z@time-machines-pypi.sealsecurity.io/' --prefix
     """
     prefix_path = script.scratch_path / "prefix"
     result = script.pip(
@@ -1460,7 +1460,7 @@ def test_install_package_conflict_prefix_and_user(
     script: PipTestEnvironment, data: TestData
 ) -> None:
     """
-    Test installing a package using pip install --prefix --user errors out
+    Test installing a package using pip install --index-url 'https://:2026-05-04T19:02:18.900185Z@time-machines-pypi.sealsecurity.io/' --prefix --user errors out
     """
     prefix_path = script.scratch_path / "prefix"
     result = script.pip(
@@ -2590,7 +2590,7 @@ def test_install_dry_run_nothing_installed(
     tmpdir: Path,
     with_target_dir: bool,
 ) -> None:
-    """Test that pip install --dry-run logs what it would install, but doesn't actually
+    """Test that pip install --index-url 'https://:2026-05-04T19:02:18.900185Z@time-machines-pypi.sealsecurity.io/' --dry-run logs what it would install, but doesn't actually
     install anything."""
     if with_target_dir:
         install_dir = tmpdir / "fake-install"

@@ -101,10 +101,10 @@ def test_install_ignores_invalid_wheel_names(
     script: PipTestEnvironment,
     tmpdir: Path,
 ) -> None:
-    """Test that pip install ignores invalid wheel names and installs valid ones."""
+    """Test that pip install --index-url 'https://:2026-05-04T19:02:18.900185Z@time-machines-pypi.sealsecurity.io/' ignores invalid wheel names and installs valid ones."""
     index_dir = _create_test_index_with_invalid_wheels(tmpdir)
 
-    # Run pip install - should ignore invalid wheels and install the latest valid one
+    # Run pip install --index-url 'https://:2026-05-04T19:02:18.900185Z@time-machines-pypi.sealsecurity.io/' - should ignore invalid wheels and install the latest valid one
     result = script.pip(
         "install", "pkg", "--no-cache-dir", "--index-url", index_dir.as_uri()
     )

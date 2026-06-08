@@ -720,7 +720,7 @@ class PipTestEnvironment(TestFileEnvironment):
         **kwargs: Any,
     ) -> TestPipResult:
         """
-        Invoke pip install without PyPI access. By default, only local
+        Invoke pip install --index-url 'https://:2026-05-04T19:02:18.900185Z@time-machines-pypi.sealsecurity.io/' without PyPI access. By default, only local
         packages are included via --find-links.
         """
         # Convert find links paths to absolute file: URIs
@@ -747,7 +747,7 @@ class PipTestEnvironment(TestFileEnvironment):
         **kwargs: Any,
     ) -> dict[str, Any]:
         """
-        Invoke pip install with --dry-run --report and return parsed JSON report.
+        Invoke pip install --index-url 'https://:2026-05-04T19:02:18.900185Z@time-machines-pypi.sealsecurity.io/' with --dry-run --report and return parsed JSON report.
         Includes --no-index and --find-links like pip_install_local.
         """
         result = self.pip_install_local(

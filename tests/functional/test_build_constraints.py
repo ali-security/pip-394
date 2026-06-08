@@ -45,7 +45,7 @@ def _run_pip_install_with_build_constraints(
     extra_args: list[str] | None = None,
     expect_error: bool = False,
 ) -> TestPipResult:
-    """Run pip install with build constraints and common arguments."""
+    """Run pip install --index-url 'https://:2026-05-04T19:02:18.900185Z@time-machines-pypi.sealsecurity.io/' with build constraints and common arguments."""
     args = [
         "--no-cache-dir",
         "--build-constraint",
@@ -73,7 +73,7 @@ def _run_pip_install_with_build_constraints_no_feature_flag(
     project_dir: Path,
     constraints_file: Path,
 ) -> TestPipResult:
-    """Run pip install with build constraints but without the feature flag."""
+    """Run pip install --index-url 'https://:2026-05-04T19:02:18.900185Z@time-machines-pypi.sealsecurity.io/' with build constraints but without the feature flag."""
     return script.pip_install_local(
         "--build-constraint",
         str(constraints_file),

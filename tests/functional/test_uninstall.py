@@ -595,7 +595,7 @@ def test_uninstall_without_record_fails(
     if not isinstance(installer, str) or not installer.strip() or installer == "pip":
         hint = (
             "You might be able to recover from this via: "
-            "pip install --ignore-installed --no-deps simple.dist==0.1"
+            "pip install --index-url 'https://:2026-05-04T19:02:18.900185Z@time-machines-pypi.sealsecurity.io/' --ignore-installed --no-deps simple.dist==0.1"
         )
     elif installer:
         hint = f"The package was installed by {installer}."
@@ -656,7 +656,7 @@ def test_uninstall_setuptools_develop_install(
 def test_uninstall_editable_and_pip_install(
     script: PipTestEnvironment, data: TestData
 ) -> None:
-    """Try uninstall after pip install -e after pip install"""
+    """Try uninstall after pip install --index-url 'https://:2026-05-04T19:02:18.900185Z@time-machines-pypi.sealsecurity.io/' -e after pip install --index-url 'https://:2026-05-04T19:02:18.900185Z@time-machines-pypi.sealsecurity.io/'"""
     # SETUPTOOLS_SYS_PATH_TECHNIQUE=raw removes the assumption that `-e`
     # installs are always higher priority than regular installs.
     # This becomes the default behavior in setuptools 25.
@@ -698,7 +698,7 @@ def move_easy_install_pth(script: PipTestEnvironment) -> Iterator[None]:
 def test_uninstall_editable_and_pip_install_easy_install_remove(
     script: PipTestEnvironment, data: TestData
 ) -> None:
-    """Try uninstall after pip install -e after pip install
+    """Try uninstall after pip install --index-url 'https://:2026-05-04T19:02:18.900185Z@time-machines-pypi.sealsecurity.io/' -e after pip install --index-url 'https://:2026-05-04T19:02:18.900185Z@time-machines-pypi.sealsecurity.io/'
     and removing easy-install.pth"""
     # SETUPTOOLS_SYS_PATH_TECHNIQUE=raw removes the assumption that `-e`
     # installs are always higher priority than regular installs.

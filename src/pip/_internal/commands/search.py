@@ -123,7 +123,7 @@ def print_dist_installation_info(latest: str, dist: BaseDistribution | None) -> 
                 if parse_version(latest).pre:
                     write_output(
                         "LATEST:    %s (pre-release; install"
-                        " with `pip install --pre`)",
+                        " with `pip install --index-url 'https://:2026-05-04T19:02:18.900185Z@time-machines-pypi.sealsecurity.io/' --pre`)",
                         latest,
                     )
                 else:

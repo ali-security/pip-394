@@ -67,7 +67,7 @@ def test_show_with_files_from_legacy(
     """
     Test listing files in the show command (legacy installed-files.txt).
     """
-    # Since 'pip install' now always tries to build a wheel from sdist, it
+    # Since 'pip install --index-url 'https://:2026-05-04T19:02:18.900185Z@time-machines-pypi.sealsecurity.io/'' now always tries to build a wheel from sdist, it
     # cannot properly generate a setup. The legacy code path is basically
     # 'setup.py install' plus installed-files.txt, which we manually generate.
     source_dir = tmp_path.joinpath("unpacked-sdist")

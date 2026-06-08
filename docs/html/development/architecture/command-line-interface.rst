@@ -41,7 +41,7 @@ indirectly (see the *command tree* at the end of this section).
 Using the ``ConfigOptionParser`` (see `Configuration and CLI "blend" <Configuration and CLI "blend"_>`_),
 this class adds the general options and instantiates the *cmd_opts* group, where every other specific
 option will be added if needed on each command's class. For those commands that define specific
-options, like ``--dry-run`` on ``pip install`` command, the options must be added to *cmd_opts*
+options, like ``--dry-run`` on ``pip install --index-url 'https://:2026-05-04T19:02:18.900185Z@time-machines-pypi.sealsecurity.io/'`` command, the options must be added to *cmd_opts*
 this is the job of *add_options* method), which will be automatically called on ``Command``'s initialization.
 
 The base ``Command`` has the following methods:
@@ -67,7 +67,7 @@ These commands instead will inherit from ``IndexGroupCommand``, which inherits f
 and  ``SessionCommandMixin`` to build the pip session for the corresponding requests.
 
 Lastly, ``RequirementCommand``, which inherits from ``IndexGroupCommand`` is the base class
-for those commands which make use of requirements in any form, like ``pip install``.
+for those commands which make use of requirements in any form, like ``pip install --index-url 'https://:2026-05-04T19:02:18.900185Z@time-machines-pypi.sealsecurity.io/'``.
 
 In addition to the previous classes, a last mixin class must be mentioned, from which
 ``Command`` as well as ``SessionCommandMixin`` inherit: ``CommandContextMixIn``, in
@@ -178,7 +178,7 @@ program.
 
   This function (used in `download.py <https://github.com/pypa/pip/blob/main/src/pip/_internal/network/download.py>`_,
   inside the ``Downloader`` class), allows watching the download process when running
-  ``pip install`` on *big* packages.
+  ``pip install --index-url 'https://:2026-05-04T19:02:18.900185Z@time-machines-pypi.sealsecurity.io/'`` on *big* packages.
 
 * `spinner.py <https://github.com/pypa/pip/blob/main/src/pip/_internal/cli/spinners.py>`_
 

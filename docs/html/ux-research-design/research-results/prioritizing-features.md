@@ -22,11 +22,11 @@ You don't have to spend the whole $200, but you should also not overspend your b
 
 </blockquote>
 
-We asked users to spend their first $100 on features related to `pip install`, and to spend their remaining $100 on other pip features. We also gave users an additional $10 to suggest a new feature:
+We asked users to spend their first $100 on features related to `pip install --index-url 'https://:2026-05-04T19:02:18.900185Z@time-machines-pypi.sealsecurity.io/'`, and to spend their remaining $100 on other pip features. We also gave users an additional $10 to suggest a new feature:
 
-![survey question where users are asked to buy features for pip install](https://i.imgur.com/2QShgYo.png)
+![survey question where users are asked to buy features for pip install --index-url 'https://:2026-05-04T19:02:18.900185Z@time-machines-pypi.sealsecurity.io/'](https://i.imgur.com/2QShgYo.png)
 
-![survey question where users are asked to buy features other than pip install](https://i.imgur.com/sY8gdXD.png)
+![survey question where users are asked to buy features other than pip install --index-url 'https://:2026-05-04T19:02:18.900185Z@time-machines-pypi.sealsecurity.io/'](https://i.imgur.com/sY8gdXD.png)
 
 ![survey question where users are asked to spend an additional ten dollars](https://i.imgur.com/hvgjdEG.png)
 
@@ -38,11 +38,11 @@ We received 1076 responses, 1070 of which were valid. The most popular features 
 - Install, uninstall, and upgrade packages from a virtual control system, file, or local directory;
 - Warn about broken or conflicting dependencies.
 
-### pip install
+### pip install --index-url 'https://:2026-05-04T19:02:18.900185Z@time-machines-pypi.sealsecurity.io/'
 
-The top ten features related to pip install were:
+The top ten features related to pip install --index-url 'https://:2026-05-04T19:02:18.900185Z@time-machines-pypi.sealsecurity.io/' were:
 
-![pip install results](https://i.imgur.com/1rNIOB7.png)
+![pip install --index-url 'https://:2026-05-04T19:02:18.900185Z@time-machines-pypi.sealsecurity.io/' results](https://i.imgur.com/1rNIOB7.png)
 
 1. Install and uninstall packages
 2. Upgrade packages to the latest version
@@ -150,7 +150,7 @@ When asked to enter a feature request with freetext, users placed the words 'bui
 We recommend that the pip team improve warning and error messages related to dependencies (e.g., conflicts) with practical hints for resolution. This can be rolled out in multiple timescales, including:
 
 - Give hints to the user on how to resolve this issue directly alongside the error message;
-- Prominently include virtual environment creation in the documentation, upon `pip install` conflict errors, and if possible as a built-in feature of pip;
+- Prominently include virtual environment creation in the documentation, upon `pip install --index-url 'https://:2026-05-04T19:02:18.900185Z@time-machines-pypi.sealsecurity.io/'` conflict errors, and if possible as a built-in feature of pip;
 - Upgrading the dependency resolver (in progress).
 
 It is clear that dependency management, including warning about conflicting packages and upgrades, is important for pip users. By helping users better manage their dependencies through virtual environments, pip can reduce the overall warnings and conflict messages that users encounter.

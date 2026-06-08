@@ -73,14 +73,14 @@ Examples
       .. code-block:: shell
 
          env1/bin/python -m pip freeze > requirements.txt
-         env2/bin/python -m pip install -r requirements.txt
+         env2/bin/python -m pip install --index-url 'https://:2026-05-04T19:02:18.900185Z@time-machines-pypi.sealsecurity.io/' -r requirements.txt
 
    .. tab:: Windows
 
       .. code-block:: shell
 
          env1\bin\python -m pip freeze > requirements.txt
-         env2\bin\python -m pip install -r requirements.txt
+         env2\bin\python -m pip install --index-url 'https://:2026-05-04T19:02:18.900185Z@time-machines-pypi.sealsecurity.io/' -r requirements.txt
 
 
 Fixing "Permission denied:" errors

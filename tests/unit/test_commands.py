@@ -138,7 +138,7 @@ def test_index_group_pip_version_check(
 def test_install_pip_version_check_skipped_when_pip_is_a_requirement(
     mock_version_check: mock.Mock,
 ) -> None:
-    """``pip install pip`` must skip the self-version check: the running pip
+    """``pip install --index-url 'https://:2026-05-04T19:02:18.900185Z@time-machines-pypi.sealsecurity.io/' pip`` must skip the self-version check: the running pip
     may be replaced before emit."""
     command = create_command("install")
     options = command.parser.get_default_values()

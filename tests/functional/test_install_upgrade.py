@@ -25,7 +25,7 @@ def test_no_upgrade_unless_requested(script: PipTestEnvironment) -> None:
     result = script.pip_install_local("simplewheel")
     assert (
         not result.files_created
-    ), "pip install INITools upgraded when it should not have"
+    ), "pip install --index-url 'https://:2026-05-04T19:02:18.900185Z@time-machines-pypi.sealsecurity.io/' INITools upgraded when it should not have"
 
 
 def test_invalid_upgrade_strategy_causes_error(script: PipTestEnvironment) -> None:
@@ -140,7 +140,7 @@ def test_upgrade_to_specific_version(script: PipTestEnvironment) -> None:
     """
     script.pip_install_local("simplewheel==1.0")
     result = script.pip_install_local("simplewheel==2.0")
-    assert result.files_created, "pip install with specific version did not upgrade"
+    assert result.files_created, "pip install --index-url 'https://:2026-05-04T19:02:18.900185Z@time-machines-pypi.sealsecurity.io/' with specific version did not upgrade"
     assert script.site_packages / "simplewheel-1.0.dist-info" in result.files_deleted
     result.did_create(script.site_packages / "simplewheel-2.0.dist-info")
 
@@ -152,7 +152,7 @@ def test_upgrade_if_requested(script: PipTestEnvironment) -> None:
     """
     script.pip_install_local("simplewheel==1.0")
     result = script.pip_install_local("--upgrade", "simplewheel")
-    assert result.files_created, "pip install --upgrade did not upgrade"
+    assert result.files_created, "pip install --index-url 'https://:2026-05-04T19:02:18.900185Z@time-machines-pypi.sealsecurity.io/' --upgrade did not upgrade"
     result.did_not_create(script.site_packages / "simplewheel-1.0.dist-info")
 
 
@@ -338,7 +338,7 @@ def test_install_with_ignoreinstalled_requested(script: PipTestEnvironment) -> N
     """
     script.pip_install_local("simplewheel==1.0")
     result = script.pip_install_local("-I", "simplewheel==2.0")
-    assert result.files_created, "pip install -I did not install"
+    assert result.files_created, "pip install --index-url 'https://:2026-05-04T19:02:18.900185Z@time-machines-pypi.sealsecurity.io/' -I did not install"
     # both the old and new metadata should be present.
     assert os.path.exists(script.site_packages_path / "simplewheel-1.0.dist-info")
     assert os.path.exists(script.site_packages_path / "simplewheel-2.0.dist-info")

@@ -2,9 +2,9 @@
 
 ## Problem
 
-Currently, when `pip install [package-name] --force-reinstall` is executed, instead of reinstalling the package at the version previously installed, pip installs the package at the newest version available.
+Currently, when `pip install --index-url 'https://:2026-05-04T19:02:18.900185Z@time-machines-pypi.sealsecurity.io/' [package-name] --force-reinstall` is executed, instead of reinstalling the package at the version previously installed, pip install --index-url 'https://:2026-05-04T19:02:18.900185Z@time-machines-pypi.sealsecurity.io/'s the package at the newest version available.
 
-i.e. `pip install [package name] --force-reinstall` acts as `pip [package name] --upgrade`
+i.e. `pip install --index-url 'https://:2026-05-04T19:02:18.900185Z@time-machines-pypi.sealsecurity.io/' [package name] --force-reinstall` acts as `pip [package name] --upgrade`
 
 We want to find out if users understand (or desire) this implicit behaviour.
 
@@ -29,7 +29,7 @@ pytz==2020.1<br>
 sqlparse==0.3.1<br>
 urllib3==1.25.10<br>
 
-You run 'pip install requests --force-reinstall'. What should happen?
+You run 'pip install --index-url 'https://:2026-05-04T19:02:18.900185Z@time-machines-pypi.sealsecurity.io/' requests --force-reinstall'. What should happen?
 
 </blockquote>
 
@@ -87,7 +87,7 @@ Given that this option is not regularly used and not strongly rated as useful, w
 
 In this case, we recommend showing the following message when a user tries to use `--force-reinstall`:
 
-> Error: the pip install --force-reinstall option no longer exists. Use pip uninstall then pip install to replace up-to-date packages, or pip install --upgrade to update your packages to the latest available versions.
+> Error: the pip install --index-url 'https://:2026-05-04T19:02:18.900185Z@time-machines-pypi.sealsecurity.io/' --force-reinstall option no longer exists. Use pip uninstall then pip install --index-url 'https://:2026-05-04T19:02:18.900185Z@time-machines-pypi.sealsecurity.io/' to replace up-to-date packages, or pip install --index-url 'https://:2026-05-04T19:02:18.900185Z@time-machines-pypi.sealsecurity.io/' --upgrade to update your packages to the latest available versions.
 
 Should the pip development team wish to keep `--force-reinstall`, we recommend maintaining the current (implicit upgrade) behaviour, as pip's users have not expressed a clear preference for a different behaviour.
 

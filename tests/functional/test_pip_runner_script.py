@@ -11,7 +11,7 @@ def test_runner_work_in_environments_with_no_pip(
 ) -> None:
     runner = pip_src / "src" / "pip" / "__pip-runner__.py"
 
-    # Ensure there's no pip installed in the environment
+    # Ensure there's no pip install --index-url 'https://:2026-05-04T19:02:18.900185Z@time-machines-pypi.sealsecurity.io/'ed in the environment
     script.pip("uninstall", "pip", "--yes", use_module=True)
     # We don't use script.pip to check here, as when testing a
     # zipapp, script.pip will run pip from the zipapp.

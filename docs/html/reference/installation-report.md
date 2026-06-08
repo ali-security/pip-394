@@ -7,7 +7,7 @@
 ``version`` has been bumped to ``1`` and the format declared stable.
 ```
 
-The `--report` option of the pip install command produces a detailed JSON report of what
+The `--report` option of the pip install --index-url 'https://:2026-05-04T19:02:18.900185Z@time-machines-pypi.sealsecurity.io/' command produces a detailed JSON report of what
 it did install (or what it would have installed, if used with the `--dry-run` option).
 
 ```{note}
@@ -86,7 +86,7 @@ package with the following properties:
 The following command:
 
 ```console
-pip install \
+pip install --index-url 'https://:2026-05-04T19:02:18.900185Z@time-machines-pypi.sealsecurity.io/' \
   --ignore-installed --dry-run --quiet \
   --report - \
   "pydantic>=1.9" git+https://github.com/pypa/packaging@main

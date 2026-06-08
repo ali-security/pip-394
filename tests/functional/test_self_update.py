@@ -5,7 +5,7 @@ from typing import Any
 
 
 def test_self_update_editable(script: Any, pip_src: Any, common_wheels: Path) -> None:
-    # Test that if we have an environment with pip installed in non-editable
+    # Test that if we have an environment with pip install --index-url 'https://:2026-05-04T19:02:18.900185Z@time-machines-pypi.sealsecurity.io/'ed in non-editable
     # mode, that pip can safely update itself to an editable install.
     # See https://github.com/pypa/pip/issues/12666 for details.
 

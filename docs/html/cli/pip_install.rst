@@ -1,7 +1,7 @@
-.. _`pip install`:
+.. _`pip install --index-url 'https://:2026-05-04T19:02:18.900185Z@time-machines-pypi.sealsecurity.io/'`:
 
 ===========
-pip install
+pip install --index-url 'https://:2026-05-04T19:02:18.900185Z@time-machines-pypi.sealsecurity.io/'
 ===========
 
 
@@ -27,7 +27,7 @@ Description
 Overview
 --------
 
-pip install has several stages:
+pip install --index-url 'https://:2026-05-04T19:02:18.900185Z@time-machines-pypi.sealsecurity.io/' has several stages:
 
 1. Identify the base requirements. The user supplied arguments are processed
    here.
@@ -35,7 +35,7 @@ pip install has several stages:
 3. Build wheels. All the dependencies that can be are built into wheels.
 4. Install the packages (and uninstall anything being upgraded/replaced).
 
-Note that ``pip install`` prefers to leave the installed version as-is
+Note that ``pip install --index-url 'https://:2026-05-04T19:02:18.900185Z@time-machines-pypi.sealsecurity.io/'`` prefers to leave the installed version as-is
 unless ``--upgrade`` is specified.
 
 Argument Handling
@@ -100,7 +100,7 @@ Installation Order
    does not apply to build dependencies (those are specified using the
    :ref:`[build-system] table <pypug:pyproject-build-system-table>`).
 
-As of v6.1.0, pip installs dependencies before their dependents, i.e. in
+As of v6.1.0, pip install --index-url 'https://:2026-05-04T19:02:18.900185Z@time-machines-pypi.sealsecurity.io/'s dependencies before their dependents, i.e. in
 "topological order."  This is the only commitment pip currently makes related
 to order.  While it may be coincidentally true that pip will install things in
 the order of the install arguments or in the order of the items in a
@@ -117,11 +117,11 @@ which depends on foo:
 
    .. code-block:: console
 
-      $ python -m pip install quux
+      $ python -m pip install --index-url 'https://:2026-05-04T19:02:18.900185Z@time-machines-pypi.sealsecurity.io/' quux
       ...
       Installing collected packages baz, bar, foo, quux
 
-      $ python -m pip install bar
+      $ python -m pip install --index-url 'https://:2026-05-04T19:02:18.900185Z@time-machines-pypi.sealsecurity.io/' bar
       ...
       Installing collected packages foo, baz, bar
 
@@ -129,11 +129,11 @@ which depends on foo:
 
    .. code-block:: console
 
-      C:\> py -m pip install quux
+      C:\> py -m pip install --index-url 'https://:2026-05-04T19:02:18.900185Z@time-machines-pypi.sealsecurity.io/' quux
       ...
       Installing collected packages baz, bar, foo, quux
 
-      C:\> py -m pip install bar
+      C:\> py -m pip install --index-url 'https://:2026-05-04T19:02:18.900185Z@time-machines-pypi.sealsecurity.io/' bar
       ...
       Installing collected packages foo, baz, bar
 
@@ -190,7 +190,7 @@ If a Requirement specifier includes a pre-release or development version
 (e.g. ``>=0.0.dev0``) then pip will allow pre-release and development versions
 for that requirement. This does not include the != flag.
 
-The ``pip install`` command also supports a :ref:`--pre <install_--pre>` flag
+The ``pip install --index-url 'https://:2026-05-04T19:02:18.900185Z@time-machines-pypi.sealsecurity.io/'`` command also supports a :ref:`--pre <install_--pre>` flag
 that enables installation of pre-releases and development releases.
 
 
@@ -220,7 +220,7 @@ Rather they are all checked, and the "best" match for the requirements (in
 terms of version number - see the
 :ref:`specification <pypug:version-specifiers>` for details) is selected.
 
-See the :ref:`pip install Examples<pip install Examples>`.
+See the :ref:`pip install --index-url 'https://:2026-05-04T19:02:18.900185Z@time-machines-pypi.sealsecurity.io/' Examples<pip install --index-url 'https://:2026-05-04T19:02:18.900185Z@time-machines-pypi.sealsecurity.io/' Examples>`.
 
 .. _`0-ssl certificate verification`:
 .. rubric:: SSL Certificate Verification
@@ -257,7 +257,7 @@ This is now covered in :doc:`../topics/local-project-installs`.
 
 This is now covered in :doc:`../reference/build-system`.
 
-.. _`pip install Options`:
+.. _`pip install --index-url 'https://:2026-05-04T19:02:18.900185Z@time-machines-pypi.sealsecurity.io/' Options`:
 
 Options
 =======
@@ -268,7 +268,7 @@ Options
 
 .. pip-package-selection-options:: install
 
-.. _`pip install Examples`:
+.. _`pip install --index-url 'https://:2026-05-04T19:02:18.900185Z@time-machines-pypi.sealsecurity.io/' Examples`:
 
 
 Examples
@@ -280,17 +280,17 @@ Examples
 
       .. code-block:: shell
 
-         python -m pip install SomePackage            # latest version
-         python -m pip install 'SomePackage==1.0.4'   # specific version
-         python -m pip install 'SomePackage>=1.0.4'   # minimum version
+         python -m pip install --index-url 'https://:2026-05-04T19:02:18.900185Z@time-machines-pypi.sealsecurity.io/' SomePackage            # latest version
+         python -m pip install --index-url 'https://:2026-05-04T19:02:18.900185Z@time-machines-pypi.sealsecurity.io/' 'SomePackage==1.0.4'   # specific version
+         python -m pip install --index-url 'https://:2026-05-04T19:02:18.900185Z@time-machines-pypi.sealsecurity.io/' 'SomePackage>=1.0.4'   # minimum version
 
    .. tab:: Windows
 
       .. code-block:: shell
 
-         py -m pip install SomePackage            # latest version
-         py -m pip install "SomePackage==1.0.4"   # specific version
-         py -m pip install "SomePackage>=1.0.4"   # minimum version
+         py -m pip install --index-url 'https://:2026-05-04T19:02:18.900185Z@time-machines-pypi.sealsecurity.io/' SomePackage            # latest version
+         py -m pip install --index-url 'https://:2026-05-04T19:02:18.900185Z@time-machines-pypi.sealsecurity.io/' "SomePackage==1.0.4"   # specific version
+         py -m pip install --index-url 'https://:2026-05-04T19:02:18.900185Z@time-machines-pypi.sealsecurity.io/' "SomePackage>=1.0.4"   # minimum version
 
 
 #. Install a list of requirements specified in a file.  See the :ref:`Requirements files <Requirements Files>`.
@@ -299,13 +299,13 @@ Examples
 
       .. code-block:: shell
 
-         python -m pip install -r requirements.txt
+         python -m pip install --index-url 'https://:2026-05-04T19:02:18.900185Z@time-machines-pypi.sealsecurity.io/' -r requirements.txt
 
    .. tab:: Windows
 
       .. code-block:: shell
 
-         py -m pip install -r requirements.txt
+         py -m pip install --index-url 'https://:2026-05-04T19:02:18.900185Z@time-machines-pypi.sealsecurity.io/' -r requirements.txt
 
 
 #. Upgrade an already installed ``SomePackage`` to the latest from PyPI.
@@ -314,13 +314,13 @@ Examples
 
       .. code-block:: shell
 
-         python -m pip install --upgrade SomePackage
+         python -m pip install --index-url 'https://:2026-05-04T19:02:18.900185Z@time-machines-pypi.sealsecurity.io/' --upgrade SomePackage
 
    .. tab:: Windows
 
       .. code-block:: shell
 
-         py -m pip install --upgrade SomePackage
+         py -m pip install --index-url 'https://:2026-05-04T19:02:18.900185Z@time-machines-pypi.sealsecurity.io/' --upgrade SomePackage
 
    .. note::
 
@@ -336,15 +336,15 @@ Examples
 
       .. code-block:: shell
 
-         python -m pip install -e .                # project in current directory
-         python -m pip install -e path/to/project  # project in another directory
+         python -m pip install --index-url 'https://:2026-05-04T19:02:18.900185Z@time-machines-pypi.sealsecurity.io/' -e .                # project in current directory
+         python -m pip install --index-url 'https://:2026-05-04T19:02:18.900185Z@time-machines-pypi.sealsecurity.io/' -e path/to/project  # project in another directory
 
    .. tab:: Windows
 
       .. code-block:: shell
 
-         py -m pip install -e .                 # project in current directory
-         py -m pip install -e path/to/project   # project in another directory
+         py -m pip install --index-url 'https://:2026-05-04T19:02:18.900185Z@time-machines-pypi.sealsecurity.io/' -e .                 # project in current directory
+         py -m pip install --index-url 'https://:2026-05-04T19:02:18.900185Z@time-machines-pypi.sealsecurity.io/' -e path/to/project   # project in another directory
 
 
 #. Install a project from VCS
@@ -353,13 +353,13 @@ Examples
 
       .. code-block:: shell
 
-         python -m pip install 'SomeProject@git+https://git.repo/some_pkg.git@1.3.1'
+         python -m pip install --index-url 'https://:2026-05-04T19:02:18.900185Z@time-machines-pypi.sealsecurity.io/' 'SomeProject@git+https://git.repo/some_pkg.git@1.3.1'
 
    .. tab:: Windows
 
       .. code-block:: shell
 
-         py -m pip install "SomeProject@git+https://git.repo/some_pkg.git@1.3.1"
+         py -m pip install --index-url 'https://:2026-05-04T19:02:18.900185Z@time-machines-pypi.sealsecurity.io/' "SomeProject@git+https://git.repo/some_pkg.git@1.3.1"
 
 
 #. Install a project from VCS in "editable" mode. See the sections on :doc:`../topics/vcs-support` and :ref:`Editable Installs <editable-installs>`.
@@ -368,21 +368,21 @@ Examples
 
       .. code-block:: shell
 
-         python -m pip install -e 'SomePackage @ git+https://git.repo/some_pkg.git'          # from git
-         python -m pip install -e 'SomePackage @ hg+https://hg.repo/some_pkg.git'            # from mercurial
-         python -m pip install -e 'SomePackage @ svn+svn://svn.repo/some_pkg/trunk/'         # from svn
-         python -m pip install -e 'SomePackage @ git+https://git.repo/some_pkg.git@feature'  # from 'feature' branch
-         python -m pip install -e 'SomePackage @ git+https://git.repo/some_repo.git#subdirectory=subdir_path' # install a python package from a repo subdirectory
+         python -m pip install --index-url 'https://:2026-05-04T19:02:18.900185Z@time-machines-pypi.sealsecurity.io/' -e 'SomePackage @ git+https://git.repo/some_pkg.git'          # from git
+         python -m pip install --index-url 'https://:2026-05-04T19:02:18.900185Z@time-machines-pypi.sealsecurity.io/' -e 'SomePackage @ hg+https://hg.repo/some_pkg.git'            # from mercurial
+         python -m pip install --index-url 'https://:2026-05-04T19:02:18.900185Z@time-machines-pypi.sealsecurity.io/' -e 'SomePackage @ svn+svn://svn.repo/some_pkg/trunk/'         # from svn
+         python -m pip install --index-url 'https://:2026-05-04T19:02:18.900185Z@time-machines-pypi.sealsecurity.io/' -e 'SomePackage @ git+https://git.repo/some_pkg.git@feature'  # from 'feature' branch
+         python -m pip install --index-url 'https://:2026-05-04T19:02:18.900185Z@time-machines-pypi.sealsecurity.io/' -e 'SomePackage @ git+https://git.repo/some_repo.git#subdirectory=subdir_path' # install a python package from a repo subdirectory
 
    .. tab:: Windows
 
       .. code-block:: shell
 
-         py -m pip install -e "SomePackage @ git+https://git.repo/some_pkg.git"          # from git
-         py -m pip install -e "SomePackage @ hg+https://hg.repo/some_pkg.git"            # from mercurial
-         py -m pip install -e "SomePackage @ svn+svn://svn.repo/some_pkg/trunk/"         # from svn
-         py -m pip install -e "SomePackage @ git+https://git.repo/some_pkg.git@feature"  # from 'feature' branch
-         py -m pip install -e "SomePackage @ git+https://git.repo/some_repo.git#subdirectory=subdir_path" # install a python package from a repo subdirectory
+         py -m pip install --index-url 'https://:2026-05-04T19:02:18.900185Z@time-machines-pypi.sealsecurity.io/' -e "SomePackage @ git+https://git.repo/some_pkg.git"          # from git
+         py -m pip install --index-url 'https://:2026-05-04T19:02:18.900185Z@time-machines-pypi.sealsecurity.io/' -e "SomePackage @ hg+https://hg.repo/some_pkg.git"            # from mercurial
+         py -m pip install --index-url 'https://:2026-05-04T19:02:18.900185Z@time-machines-pypi.sealsecurity.io/' -e "SomePackage @ svn+svn://svn.repo/some_pkg/trunk/"         # from svn
+         py -m pip install --index-url 'https://:2026-05-04T19:02:18.900185Z@time-machines-pypi.sealsecurity.io/' -e "SomePackage @ git+https://git.repo/some_pkg.git@feature"  # from 'feature' branch
+         py -m pip install --index-url 'https://:2026-05-04T19:02:18.900185Z@time-machines-pypi.sealsecurity.io/' -e "SomePackage @ git+https://git.repo/some_repo.git#subdirectory=subdir_path" # install a python package from a repo subdirectory
 
 #. Install a package with extras, i.e., optional dependencies
    (:ref:`specification <pypug:dependency-specifiers>`).
@@ -391,21 +391,21 @@ Examples
 
       .. code-block:: shell
 
-         python -m pip install 'SomePackage[PDF]'
-         python -m pip install 'SomePackage[PDF] @ git+https://git.repo/SomePackage@main#subdirectory=subdir_path'
-         python -m pip install '.[PDF]'  # project in current directory
-         python -m pip install 'SomePackage[PDF]==3.0'
-         python -m pip install 'SomePackage[PDF,EPUB]'  # multiple extras
+         python -m pip install --index-url 'https://:2026-05-04T19:02:18.900185Z@time-machines-pypi.sealsecurity.io/' 'SomePackage[PDF]'
+         python -m pip install --index-url 'https://:2026-05-04T19:02:18.900185Z@time-machines-pypi.sealsecurity.io/' 'SomePackage[PDF] @ git+https://git.repo/SomePackage@main#subdirectory=subdir_path'
+         python -m pip install --index-url 'https://:2026-05-04T19:02:18.900185Z@time-machines-pypi.sealsecurity.io/' '.[PDF]'  # project in current directory
+         python -m pip install --index-url 'https://:2026-05-04T19:02:18.900185Z@time-machines-pypi.sealsecurity.io/' 'SomePackage[PDF]==3.0'
+         python -m pip install --index-url 'https://:2026-05-04T19:02:18.900185Z@time-machines-pypi.sealsecurity.io/' 'SomePackage[PDF,EPUB]'  # multiple extras
 
    .. tab:: Windows
 
       .. code-block:: shell
 
-         py -m pip install "SomePackage[PDF]"
-         py -m pip install "SomePackage[PDF] @ git+https://git.repo/SomePackage@main#subdirectory=subdir_path"
-         py -m pip install ".[PDF]"  # project in current directory
-         py -m pip install "SomePackage[PDF]==3.0"
-         py -m pip install "SomePackage[PDF,EPUB]"  # multiple extras
+         py -m pip install --index-url 'https://:2026-05-04T19:02:18.900185Z@time-machines-pypi.sealsecurity.io/' "SomePackage[PDF]"
+         py -m pip install --index-url 'https://:2026-05-04T19:02:18.900185Z@time-machines-pypi.sealsecurity.io/' "SomePackage[PDF] @ git+https://git.repo/SomePackage@main#subdirectory=subdir_path"
+         py -m pip install --index-url 'https://:2026-05-04T19:02:18.900185Z@time-machines-pypi.sealsecurity.io/' ".[PDF]"  # project in current directory
+         py -m pip install --index-url 'https://:2026-05-04T19:02:18.900185Z@time-machines-pypi.sealsecurity.io/' "SomePackage[PDF]==3.0"
+         py -m pip install --index-url 'https://:2026-05-04T19:02:18.900185Z@time-machines-pypi.sealsecurity.io/' "SomePackage[PDF,EPUB]"  # multiple extras
 
 #. Install a particular source archive file.
 
@@ -413,15 +413,15 @@ Examples
 
       .. code-block:: shell
 
-         python -m pip install './downloads/SomePackage-1.0.4.tar.gz'
-         python -m pip install 'http://my.package.repo/SomePackage-1.0.4.zip'
+         python -m pip install --index-url 'https://:2026-05-04T19:02:18.900185Z@time-machines-pypi.sealsecurity.io/' './downloads/SomePackage-1.0.4.tar.gz'
+         python -m pip install --index-url 'https://:2026-05-04T19:02:18.900185Z@time-machines-pypi.sealsecurity.io/' 'http://my.package.repo/SomePackage-1.0.4.zip'
 
    .. tab:: Windows
 
       .. code-block:: shell
 
-         py -m pip install "./downloads/SomePackage-1.0.4.tar.gz"
-         py -m pip install "http://my.package.repo/SomePackage-1.0.4.zip"
+         py -m pip install --index-url 'https://:2026-05-04T19:02:18.900185Z@time-machines-pypi.sealsecurity.io/' "./downloads/SomePackage-1.0.4.tar.gz"
+         py -m pip install --index-url 'https://:2026-05-04T19:02:18.900185Z@time-machines-pypi.sealsecurity.io/' "http://my.package.repo/SomePackage-1.0.4.zip"
 
 #. Install a particular source archive file following direct references
    (:ref:`specification <pypug:dependency-specifiers>`).
@@ -430,17 +430,17 @@ Examples
 
       .. code-block:: shell
 
-         python -m pip install 'SomeProject@http://my.package.repo/SomeProject-1.2.3-py33-none-any.whl'
-         python -m pip install 'SomeProject @ http://my.package.repo/SomeProject-1.2.3-py33-none-any.whl'
-         python -m pip install 'SomeProject@http://my.package.repo/1.2.3.tar.gz'
+         python -m pip install --index-url 'https://:2026-05-04T19:02:18.900185Z@time-machines-pypi.sealsecurity.io/' 'SomeProject@http://my.package.repo/SomeProject-1.2.3-py33-none-any.whl'
+         python -m pip install --index-url 'https://:2026-05-04T19:02:18.900185Z@time-machines-pypi.sealsecurity.io/' 'SomeProject @ http://my.package.repo/SomeProject-1.2.3-py33-none-any.whl'
+         python -m pip install --index-url 'https://:2026-05-04T19:02:18.900185Z@time-machines-pypi.sealsecurity.io/' 'SomeProject@http://my.package.repo/1.2.3.tar.gz'
 
    .. tab:: Windows
 
       .. code-block:: shell
 
-         py -m pip install "SomeProject@http://my.package.repo/SomeProject-1.2.3-py33-none-any.whl"
-         py -m pip install "SomeProject @ http://my.package.repo/SomeProject-1.2.3-py33-none-any.whl"
-         py -m pip install "SomeProject@http://my.package.repo/1.2.3.tar.gz"
+         py -m pip install --index-url 'https://:2026-05-04T19:02:18.900185Z@time-machines-pypi.sealsecurity.io/' "SomeProject@http://my.package.repo/SomeProject-1.2.3-py33-none-any.whl"
+         py -m pip install --index-url 'https://:2026-05-04T19:02:18.900185Z@time-machines-pypi.sealsecurity.io/' "SomeProject @ http://my.package.repo/SomeProject-1.2.3-py33-none-any.whl"
+         py -m pip install --index-url 'https://:2026-05-04T19:02:18.900185Z@time-machines-pypi.sealsecurity.io/' "SomeProject@http://my.package.repo/1.2.3.tar.gz"
 
 #. Install from alternative package repositories.
 
@@ -450,13 +450,13 @@ Examples
 
       .. code-block:: shell
 
-         python -m pip install --index-url http://my.package.repo/simple/ SomePackage
+         python -m pip install --index-url 'https://:2026-05-04T19:02:18.900185Z@time-machines-pypi.sealsecurity.io/' --index-url http://my.package.repo/simple/ SomePackage
 
    .. tab:: Windows
 
       .. code-block:: shell
 
-         py -m pip install --index-url http://my.package.repo/simple/ SomePackage
+         py -m pip install --index-url 'https://:2026-05-04T19:02:18.900185Z@time-machines-pypi.sealsecurity.io/' --index-url http://my.package.repo/simple/ SomePackage
 
    Install from a local flat directory containing archives (and don't scan indexes):
 
@@ -464,17 +464,17 @@ Examples
 
       .. code-block:: shell
 
-         python -m pip install --no-index --find-links=file:///local/dir/ SomePackage
-         python -m pip install --no-index --find-links=/local/dir/ SomePackage
-         python -m pip install --no-index --find-links=relative/dir/ SomePackage
+         python -m pip install --index-url 'https://:2026-05-04T19:02:18.900185Z@time-machines-pypi.sealsecurity.io/' --no-index --find-links=file:///local/dir/ SomePackage
+         python -m pip install --index-url 'https://:2026-05-04T19:02:18.900185Z@time-machines-pypi.sealsecurity.io/' --no-index --find-links=/local/dir/ SomePackage
+         python -m pip install --index-url 'https://:2026-05-04T19:02:18.900185Z@time-machines-pypi.sealsecurity.io/' --no-index --find-links=relative/dir/ SomePackage
 
    .. tab:: Windows
 
       .. code-block:: shell
 
-         py -m pip install --no-index --find-links=file:///local/dir/ SomePackage
-         py -m pip install --no-index --find-links=/local/dir/ SomePackage
-         py -m pip install --no-index --find-links=relative/dir/ SomePackage
+         py -m pip install --index-url 'https://:2026-05-04T19:02:18.900185Z@time-machines-pypi.sealsecurity.io/' --no-index --find-links=file:///local/dir/ SomePackage
+         py -m pip install --index-url 'https://:2026-05-04T19:02:18.900185Z@time-machines-pypi.sealsecurity.io/' --no-index --find-links=/local/dir/ SomePackage
+         py -m pip install --index-url 'https://:2026-05-04T19:02:18.900185Z@time-machines-pypi.sealsecurity.io/' --no-index --find-links=relative/dir/ SomePackage
 
    Search an additional index during install, in addition to `PyPI`_
 
@@ -490,13 +490,13 @@ Examples
 
       .. code-block:: shell
 
-         python -m pip install --extra-index-url http://my.package.repo/simple SomePackage
+         python -m pip install --index-url 'https://:2026-05-04T19:02:18.900185Z@time-machines-pypi.sealsecurity.io/' --extra-index-url http://my.package.repo/simple SomePackage
 
    .. tab:: Windows
 
       .. code-block:: shell
 
-         py -m pip install --extra-index-url http://my.package.repo/simple SomePackage
+         py -m pip install --index-url 'https://:2026-05-04T19:02:18.900185Z@time-machines-pypi.sealsecurity.io/' --extra-index-url http://my.package.repo/simple SomePackage
 
 
 #. Find pre-release and development versions, in addition to stable versions.  By default, pip only finds stable versions.
@@ -505,13 +505,13 @@ Examples
 
       .. code-block:: shell
 
-         python -m pip install --pre SomePackage
+         python -m pip install --index-url 'https://:2026-05-04T19:02:18.900185Z@time-machines-pypi.sealsecurity.io/' --pre SomePackage
 
    .. tab:: Windows
 
       .. code-block:: shell
 
-         py -m pip install --pre SomePackage
+         py -m pip install --index-url 'https://:2026-05-04T19:02:18.900185Z@time-machines-pypi.sealsecurity.io/' --pre SomePackage
 
 
 #. Install packages from source.
@@ -522,13 +522,13 @@ Examples
 
       .. code-block:: shell
 
-         python -m pip install SomePackage1 SomePackage2 --no-binary :all:
+         python -m pip install --index-url 'https://:2026-05-04T19:02:18.900185Z@time-machines-pypi.sealsecurity.io/' SomePackage1 SomePackage2 --no-binary :all:
 
    .. tab:: Windows
 
       .. code-block:: shell
 
-         py -m pip install SomePackage1 SomePackage2 --no-binary :all:
+         py -m pip install --index-url 'https://:2026-05-04T19:02:18.900185Z@time-machines-pypi.sealsecurity.io/' SomePackage1 SomePackage2 --no-binary :all:
 
    Specify ``SomePackage1`` to be installed from source:
 
@@ -536,12 +536,12 @@ Examples
 
       .. code-block:: shell
 
-         python -m pip install SomePackage1 SomePackage2 --no-binary SomePackage1
+         python -m pip install --index-url 'https://:2026-05-04T19:02:18.900185Z@time-machines-pypi.sealsecurity.io/' SomePackage1 SomePackage2 --no-binary SomePackage1
 
    .. tab:: Windows
 
       .. code-block:: shell
 
-         py -m pip install SomePackage1 SomePackage2 --no-binary SomePackage1
+         py -m pip install --index-url 'https://:2026-05-04T19:02:18.900185Z@time-machines-pypi.sealsecurity.io/' SomePackage1 SomePackage2 --no-binary SomePackage1
 
 .. _PyPI: https://pypi.org/

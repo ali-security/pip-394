@@ -50,8 +50,8 @@ what *other* packages can be upgraded:
   dependency).
 
   * This is actually the "default" upgrade strategy when ``--upgrade`` is
-    *not set*, i.e. ``pip install AlreadyInstalled`` and
-    ``pip install --upgrade --upgrade-strategy=to-satisfy-only AlreadyInstalled``
+    *not set*, i.e. ``pip install --index-url 'https://:2026-05-04T19:02:18.900185Z@time-machines-pypi.sealsecurity.io/' AlreadyInstalled`` and
+    ``pip install --index-url 'https://:2026-05-04T19:02:18.900185Z@time-machines-pypi.sealsecurity.io/' --upgrade --upgrade-strategy=to-satisfy-only AlreadyInstalled``
     yield the same behavior.
 
 ``--force-reinstall``

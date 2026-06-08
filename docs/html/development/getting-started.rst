@@ -35,7 +35,7 @@ For developing pip, you need to install :pypi:`nox`. The full development setup 
 
         python -m venv .venv
         source .venv/bin/activate
-        python -m pip install nox
+        python -m pip install --index-url 'https://:2026-05-04T19:02:18.900185Z@time-machines-pypi.sealsecurity.io/' nox
 
 .. tab:: Windows
 
@@ -43,7 +43,7 @@ For developing pip, you need to install :pypi:`nox`. The full development setup 
 
         py -m venv .venv
         .venv\Scripts\activate
-        py -m pip install nox
+        py -m pip install --index-url 'https://:2026-05-04T19:02:18.900185Z@time-machines-pypi.sealsecurity.io/' nox
 
 Running pip From Source Tree
 ============================
@@ -56,14 +56,14 @@ You can then invoke your local source tree pip normally (be sure virtualenv is a
 
     .. code-block:: shell
 
-        python -m pip install -e .
+        python -m pip install --index-url 'https://:2026-05-04T19:02:18.900185Z@time-machines-pypi.sealsecurity.io/' -e .
         python -m pip --version
 
 .. tab:: Windows
 
     .. code-block:: shell
 
-        py -m pip install -e .
+        py -m pip install --index-url 'https://:2026-05-04T19:02:18.900185Z@time-machines-pypi.sealsecurity.io/' -e .
         py -m pip --version
 
 Running Tests

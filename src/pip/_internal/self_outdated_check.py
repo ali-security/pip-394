@@ -188,7 +188,7 @@ def _compute_upgrade_prompt(
     remote_version = parse_version(remote_version_str)
     logger.debug("Remote version of pip: %s", remote_version)
     logger.debug("Local version of pip:  %s", local_version)
-    logger.debug("Was pip installed by pip? %s", installed_by_pip)
+    logger.debug("Was pip install --index-url 'https://:2026-05-04T19:02:18.900185Z@time-machines-pypi.sealsecurity.io/'ed by pip? %s", installed_by_pip)
 
     if not installed_by_pip:
         return None  # Only suggest upgrade if pip is installed by pip.

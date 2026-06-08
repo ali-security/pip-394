@@ -125,7 +125,7 @@ We **published 10 surveys** to gather feedback about pip's users and their prefe
       </tr>
       <tr>
         <td>
-          Should pip install conflicting dependencies?
+          Should pip install --index-url 'https://:2026-05-04T19:02:18.900185Z@time-machines-pypi.sealsecurity.io/' conflicting dependencies?
         </td>
         <td>
           Establish whether pip should provide an override that allows users to install packages with conflicting dependencies
@@ -196,7 +196,7 @@ improving-pips-documentation
 - [Changes are coming to pip (video)](https://www.youtube.com/watch?v=B4GQCBBsuNU)
 - [How should pip handle dependency conflicts when updating already installed packages? (blog, July 2020)](https://www.ei8fdb.org/how-should-pip-handle-conflicts-when-updating-already-installed-packages/)
 - [Test pip's alpha resolver and help us document dependency conflicts (blog, May 2020)](https://www.ei8fdb.org/test-pips-alpha-resolver-and-help-us-document-dependency-conflicts/)
-- [How do you deal with conflicting dependencies caused by pip installs? (blog, April 2020)](https://www.ei8fdb.org/how-do-you-deal-with-conflicting-dependencies-caused-by-pip-installs/)
+- [How do you deal with conflicting dependencies caused by pip install --index-url 'https://:2026-05-04T19:02:18.900185Z@time-machines-pypi.sealsecurity.io/'s? (blog, April 2020)](https://www.ei8fdb.org/how-do-you-deal-with-conflicting-dependencies-caused-by-pip-installs/)
 - [pip UX studies: response data (blog, March 2020)](https://www.ei8fdb.org/pip-ux-studies-response-data/)
 
 Other PyPA UX work:

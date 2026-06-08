@@ -247,7 +247,7 @@ Participants use assistive technology across the three most popular desktop oper
 
 We asked participants how well their assistive technologies worked when they use pip. All participants using assistive technology with pip said it worked well for them.
 
-We received some feedback about screen readers not coping well with long output, with users experiencing difficulties accessing content at the top of the current terminal window. Therefore, commands or actions (e.g. pip help, pip install, failed builds) that generate a lot of content can be a problem for screenreader users.
+We received some feedback about screen readers not coping well with long output, with users experiencing difficulties accessing content at the top of the current terminal window. Therefore, commands or actions (e.g. pip help, pip install --index-url 'https://:2026-05-04T19:02:18.900185Z@time-machines-pypi.sealsecurity.io/', failed builds) that generate a lot of content can be a problem for screenreader users.
 
 ## Recommendations
 

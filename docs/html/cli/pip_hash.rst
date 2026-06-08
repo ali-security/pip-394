@@ -27,10 +27,10 @@ Overview
 
 ``pip hash`` is a convenient way to get a hash digest for use with
 :ref:`hash-checking mode`, especially for packages with multiple archives. The
-error message from ``pip install --require-hashes ...`` will give you one
+error message from ``pip install --index-url 'https://:2026-05-04T19:02:18.900185Z@time-machines-pypi.sealsecurity.io/' --require-hashes ...`` will give you one
 hash, but, if there are multiple archives (like source and binary ones), you
 will need to manually download and compute a hash for the others. Otherwise, a
-spurious hash mismatch could occur when :ref:`pip install` is passed a
+spurious hash mismatch could occur when :ref:`pip install --index-url 'https://:2026-05-04T19:02:18.900185Z@time-machines-pypi.sealsecurity.io/'` is passed a
 different set of options, like :ref:`--no-binary <install_--no-binary>`.
 
 

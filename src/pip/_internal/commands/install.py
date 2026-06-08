@@ -97,7 +97,7 @@ def _prevent_import_hook(name: str, args: tuple[Any, ...]) -> None:
     if module.partition(".")[0] in _STDLIB_MODULE_NAMES:
         return
     deprecated(
-        reason=f"Unexpected import of {module!r} after pip install started.",
+        reason=f"Unexpected import of {module!r} after pip install --index-url 'https://:2026-05-04T19:02:18.900185Z@time-machines-pypi.sealsecurity.io/' started.",
         replacement=None,
         gone_in="26.3",
         issue=13842,
@@ -118,7 +118,7 @@ def _eagerly_import_modules() -> None:
 
 
 def _prevent_further_imports() -> None:
-    """Install an audit hook that warns on unexpected imports after pip install starts.
+    """Install an audit hook that warns on unexpected imports after pip install --index-url 'https://:2026-05-04T19:02:18.900185Z@time-machines-pypi.sealsecurity.io/' starts.
 
     Eagerly pre-imports the known lazy imports first so the hook only fires
     on genuinely unexpected modules.

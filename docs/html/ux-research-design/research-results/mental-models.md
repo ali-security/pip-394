@@ -11,7 +11,7 @@ We want to understand how pip's users understand pip as a tool: what they think 
 In order to capture participants mental models of pip and how package management works, we asked participants the following questions:
 
 - In your own words, explain what pip is
-- In your own words, explain what happens when pip installs a software package
+- In your own words, explain what happens when pip install --index-url 'https://:2026-05-04T19:02:18.900185Z@time-machines-pypi.sealsecurity.io/'s a software package
 - In your own words, explain what a Python package dependency is
 
 When we talk about mental models, we talk about "deep" or "shallow" mental models. When a user has a deep mental models of something, their have a deep understanding with a lot of detail, shallow models are the opposite.
@@ -25,7 +25,7 @@ The analysis focused on participants with between 2 and 10 years of Python exper
 Over 90% of participants did not have a deep understanding of pip - with limited understanding of what pip is, what it does during the install process, and of package management in general.
 However, while participants' understanding was low, only 4 participants had factually incorrect understandings of what pip is and does.
 
-Participants had a slightly deeper understanding of what happens during a pip install process. The most in depth answer included 7 of the 13 identified aspects. The median was 3. Answers focused on resolving dependencies, finding possible package names, downloading assets and installing the package.
+Participants had a slightly deeper understanding of what happens during a pip install --index-url 'https://:2026-05-04T19:02:18.900185Z@time-machines-pypi.sealsecurity.io/' process. The most in depth answer included 7 of the 13 identified aspects. The median was 3. Answers focused on resolving dependencies, finding possible package names, downloading assets and installing the package.
 
 Participants' understanding of software dependencies was again shallow - the most in depth answer included 8 identified aspects. The median was 3. Answers focused on the fact that software dependencies were a result of code reuse, that constraining package versions reduced the possibility of dependency conflicts.
 
@@ -37,7 +37,7 @@ The full data is available in[ this spreadsheet](https://docs.google.com/spreads
 
 > "Pip is a package management system for python. Kind of like apt in linux, it can be used to install packages in public or private repositories into the current version or environment of Python that invoked the pip command." **- participant 240364032 (Professional software developer using Python for 7-10 years)**
 
-> "pip allows to install/update remove python libraries in your environment. pip manage the library. you will need something else to manage your environment. To use it the easiest is pip install `package-name` I recommend using a requirements.txt and add as you go the library and do pip install -r requirements.txt each time. it avoid to forget a library at the end of the project :)" **- participant 241178995 (Data scientist working in software engineering)**
+> "pip allows to install/update remove python libraries in your environment. pip manage the library. you will need something else to manage your environment. To use it the easiest is pip install --index-url 'https://:2026-05-04T19:02:18.900185Z@time-machines-pypi.sealsecurity.io/' `package-name` I recommend using a requirements.txt and add as you go the library and do pip install --index-url 'https://:2026-05-04T19:02:18.900185Z@time-machines-pypi.sealsecurity.io/' -r requirements.txt each time. it avoid to forget a library at the end of the project :)" **- participant 241178995 (Data scientist working in software engineering)**
 
 > "python's npm/cargo/opam... dedicated package manager and ecosystem for python libraries and applications" **- participant 240306262 (self-taught Python creative artist and web developer, using Python for 5-6 years)**
 
@@ -45,7 +45,7 @@ The full data is available in[ this spreadsheet](https://docs.google.com/spreads
 
 > "Pip is the tool primarily used in the Python community to install packages. ("Package" means two different things in Python; it can be a target of the `import` statement that includes modules and other packages, or it can mean a collection of code with a defined interface that can be installed for reuse. I'm referring to the second thing here.) Pip's implementation defines what it means for a package to be installed in a Python environment. Any other tool that wishes to install software into a Python environment (e.g. conda) must match Pip's implementation." **- participant 240313922 (Computer security researcher at a university, using Python for 7-10 years)**
 
-### Responses to "In your own words, explain what happens when pip installs a software package"
+### Responses to "In your own words, explain what happens when pip install --index-url 'https://:2026-05-04T19:02:18.900185Z@time-machines-pypi.sealsecurity.io/'s a software package"
 
 > "I think pip looks up package "tea" in the repository of packages (PyPI by default, but can be changed). If it doesn't find it, it gives an error. If it exists, it downloads some information about the package, like what form it exists in. This can be a wheel, or a package that needs to be built. If it is a wheel, it checks the dependencies and installs them, then it installs the wheel (not sure what this means, probably it extracts it). The wheel is specific to a python distribution and base OS, so it might be available on certain platforms but not others. If it is a package that needs to be built, pip downloads the package source (or clones the repository), and runs setup.py, which installs dependencies and other packages, then the package itself. I forgot to mention that before installing there is some check for checking compatibility of the version required and the versions required by other packages." **- participant 240426799 (Scientific researcher - data analysis and computer vision models, using Python for 5-6 years)**
 

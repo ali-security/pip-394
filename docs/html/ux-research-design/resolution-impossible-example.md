@@ -10,7 +10,7 @@ Where a user wants to install packages (with 1 or more pinned version)
 with default verbose level
 
 ```
-$ pip install peach=1.0 apple=2.0
+$ pip install --index-url 'https://:2026-05-04T19:02:18.900185Z@time-machines-pypi.sealsecurity.io/' peach=1.0 apple=2.0
 
 Due to conflicting dependencies pip cannot install Peach1.0 and Apple2.0:
 
@@ -43,7 +43,7 @@ NB: We are assuming this resolver behaviour gets implemented, based on [GH issue
 **with default verbose level**
 
 ```
-$ pip install apple peach
+$ pip install --index-url 'https://:2026-05-04T19:02:18.900185Z@time-machines-pypi.sealsecurity.io/' apple peach
 
 Due to conflicting dependencies pip cannot install apple or peach. Both depend on banana, but pip can't find a version of either where they depend on the same banana version.
 

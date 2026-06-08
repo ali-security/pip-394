@@ -769,7 +769,7 @@ class UninstallMissingRecord(DiagnosticPipError):
             dep = f"{distribution.raw_name}=={distribution.version}"
             hint = Text.assemble(
                 "You might be able to recover from this via: ",
-                (f"pip install --ignore-installed --no-deps {dep}", "green"),
+                (f"pip install --index-url 'https://:2026-05-04T19:02:18.900185Z@time-machines-pypi.sealsecurity.io/' --ignore-installed --no-deps {dep}", "green"),
             )
         else:
             hint = Text(

@@ -48,7 +48,7 @@ In total, we received 415 responses to the survey.
 
 An overwhelming majority (>70%) of respondents indicated that they want some kind of override that allows them to install packages when there are dependency conflicts. Despite desiring this feature, most respondents said if it exists they would use it "not often" — this indicates that it is an advanced feature that is not critical to day-to-day usage. Nevertheless, because it would be difficult or very difficult to find a workaround (>60%), we suggest that pip should offer a override feature (see recommendations, below).
 
-Over half of the respondents said that `pip install tea coffee --ignore-conflicts` was the most ideal syntax for this command when installing multiple packages at once with a conflicting dependency. When using the `pip install --ignore-conflicts` command, a majority (>48%) of respondents said they would prefer pip to install to the most recent version of the conflicted dependency.
+Over half of the respondents said that `pip install --index-url 'https://:2026-05-04T19:02:18.900185Z@time-machines-pypi.sealsecurity.io/' tea coffee --ignore-conflicts` was the most ideal syntax for this command when installing multiple packages at once with a conflicting dependency. When using the `pip install --index-url 'https://:2026-05-04T19:02:18.900185Z@time-machines-pypi.sealsecurity.io/' --ignore-conflicts` command, a majority (>48%) of respondents said they would prefer pip to install to the most recent version of the conflicted dependency.
 
 Most respondents suggested that installing the latest version by default is safer, because it could include security fixes or features that would be difficult to replicate on their own. They also trust that dependencies will be largely backwards-compatible. However, they said it was very important that it is necessary to have a way to override this default behavior, in case they need to use an older version of the conflicted package.
 
@@ -58,5 +58,5 @@ Based on this research we recommend that the pip team:
 
 - Implement an `--ignore-conflicts` option, that allows users to install packages with conflicting dependencies
 - Ensure that `--ignore-conflicts` installs the most recent version of the conflicting package. For example, for conflicting package `water<1.1.2` and `water≥1.1.2`, pip should prefer to install `water≥1.1.2`.
-- Allow users to override this default behavior by specifying the version of the conflicting packages. For example, `pip install tea coffee water==1.1.1 --ignore-conflicts`
+- Allow users to override this default behavior by specifying the version of the conflicting packages. For example, `pip install --index-url 'https://:2026-05-04T19:02:18.900185Z@time-machines-pypi.sealsecurity.io/' tea coffee water==1.1.1 --ignore-conflicts`
 - Warn users that they used the `--ignore-conflicts` flag and that this may cause unexpected behavior in their program

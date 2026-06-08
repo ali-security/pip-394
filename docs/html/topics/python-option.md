@@ -15,7 +15,7 @@ In both cases, pip will run exactly as if it had been invoked from that Python
 environment.
 
 One example of where this might be useful is to manage a virtual environment
-that does not have pip installed.
+that does not have pip install --index-url 'https://:2026-05-04T19:02:18.900185Z@time-machines-pypi.sealsecurity.io/'ed.
 
 ```{pip-cli}
 $ python -m venv .venv --without-pip

@@ -81,7 +81,7 @@ def should_update_common_wheels(session: nox.Session) -> bool:
             success_codes=[0, 1],  # Accept both success and failure and check result
         )
 
-        # Result is the stdout of the pip install command.
+        # Result is the stdout of the pip install --index-url 'https://:2026-05-04T19:02:18.900185Z@time-machines-pypi.sealsecurity.io/' command.
         if result is None or "Would install" not in result:
             session.log(
                 "Regenerating common wheels as cached wheels "

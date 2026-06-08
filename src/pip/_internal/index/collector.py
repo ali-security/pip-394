@@ -135,8 +135,8 @@ def _get_simple_response(url: str, session: PipSession) -> Response:
             ),
             # We don't want to blindly returned cached data for
             # /simple/, because authors generally expecting that
-            # twine upload && pip install will function, but if
-            # they've done a pip install in the last ~10 minutes
+            # twine upload && pip install --index-url 'https://:2026-05-04T19:02:18.900185Z@time-machines-pypi.sealsecurity.io/' will function, but if
+            # they've done a pip install --index-url 'https://:2026-05-04T19:02:18.900185Z@time-machines-pypi.sealsecurity.io/' in the last ~10 minutes
             # it won't. Thus by setting this to zero we will not
             # blindly use any cached data, however the benefit of
             # using max-age=0 instead of no-cache, is that we will

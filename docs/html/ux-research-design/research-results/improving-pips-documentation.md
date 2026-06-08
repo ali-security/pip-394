@@ -120,11 +120,11 @@ From our keyword research we identified seven _query types_: "about pip", "insta
 - ubuntu install pip
 - pip windows
 - install pip windows
-- pip install windows
+- pip install --index-url 'https://:2026-05-04T19:02:18.900185Z@time-machines-pypi.sealsecurity.io/' windows
 - how to install pip windows
 - how to install pip in windows
 - how to install pip on windows
-- how to pip install on windows
+- how to pip install --index-url 'https://:2026-05-04T19:02:18.900185Z@time-machines-pypi.sealsecurity.io/' on windows
 - how to install pip on windows 10
 - how to run pip on windows
 
@@ -146,17 +146,17 @@ From our keyword research we identified seven _query types_: "about pip", "insta
 ### Using pip
 
 - how to use pip
-- how to use pip install
-- how to pip install
+- how to use pip install --index-url 'https://:2026-05-04T19:02:18.900185Z@time-machines-pypi.sealsecurity.io/'
+- how to pip install --index-url 'https://:2026-05-04T19:02:18.900185Z@time-machines-pypi.sealsecurity.io/'
 - how to use pip python
 - how to install with pip
 - how to run pip
 - python how to use pip
-- pip install requirements.txt
+- pip install --index-url 'https://:2026-05-04T19:02:18.900185Z@time-machines-pypi.sealsecurity.io/' requirements.txt
 - pip requirements.txt
 - pip freeze
 - pip update package
-- pip install specific version
+- pip install --index-url 'https://:2026-05-04T19:02:18.900185Z@time-machines-pypi.sealsecurity.io/' specific version
 - pip upgrade package
 - pip uninstall package
 
@@ -168,16 +168,16 @@ From our keyword research we identified seven _query types_: "about pip", "insta
 - 'pip' is not recognized as an internal or external command, operable program or batch file.
 - -bash: pip: command not found
 - pip is not recognized as an internal or external command
-- pip install invalid syntax
+- pip install --index-url 'https://:2026-05-04T19:02:18.900185Z@time-machines-pypi.sealsecurity.io/' invalid syntax
 
 ### Other
 
 - how to add pip to path
 - how to check pip version
 - how does pip work
-- where does pip install packages
+- where does pip install --index-url 'https://:2026-05-04T19:02:18.900185Z@time-machines-pypi.sealsecurity.io/' packages
 - pip vs pip3
-- where is pip installed
+- where is pip install --index-url 'https://:2026-05-04T19:02:18.900185Z@time-machines-pypi.sealsecurity.io/'ed
 
 </details>
 <br/>
@@ -416,10 +416,10 @@ _Page purpose:_
 _Suggested content:_
 
 - What is the difference between pip and pip3?
-- Where does pip install packages?
+- Where does pip install --index-url 'https://:2026-05-04T19:02:18.900185Z@time-machines-pypi.sealsecurity.io/' packages?
 - How can I check pip's version?
 - How can I add pip to my path?
-- Where is pip installed?
+- Where is pip install --index-url 'https://:2026-05-04T19:02:18.900185Z@time-machines-pypi.sealsecurity.io/'ed?
 - What does pip stand for?
 
 See [popular questions on Stack Overflow](https://stackoverflow.com/search?q=pip&s=ec4ee117-277a-4c5d-a3f5-c921ca6c5da6) for more examples.
